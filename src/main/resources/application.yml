@@ -17,13 +17,13 @@ jackson:
 confluent:
   config:
     - name: events
-      host: ${USER}
+      host: ${REGISTRY_HOST:}
       kafka:
         secrets:
-            api_key: ${USER:}
-            api_secret: ${USER:}
+            api_key: ${REGISTRY_API_KEY:}
+            api_secret: ${REGISTRY_API_SECRET:}
       secrets:
-        - api_key: ${USER:}
-          api_secret: ${USER:}
+        - api_key: ${REGISTRY_API_KEY:}
+          api_secret: ${REGISTRY_API_SECRET:}
 
 
